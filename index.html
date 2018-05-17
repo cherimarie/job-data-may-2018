@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Front End Popularity</title>
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Term', 'Number of Occurances'],
+          ['JS Frameworks*', 49],
+          ['CSS Preprocessors**', 20],
+          ['jQuery', 14],
+          ['API Consumption', 11],
+          ['Git/Github', 10],
+          ['Testing', 10],
+          ['User Experience', 9],
+          ['Agile', 7],
+          ['Performance', 5],
+          ['SEO/analytics', 5],
+          ['ES6 syntax', 4],
+          ['Accessibility', 4],
+          ['Bootstrap', 2],
+        ])
+
+        var options = {
+          'title':'Most Commonly Mentioned Skills',
+          'width':700,
+          'height':500,
+          legend: {position: 'none'}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+  <h1>Survey of 30 Front End Job Listings</h1>
+  <div id="chart_div"></div>
+  <small>* "React" 19 times, "Angular" 16 times, and 14 instances of other or general mention of frameworks</small><br>
+  <small>** "SASS" 12 times, "LESS" 8 times.</small><br>
+  <small>Data collected May 5, 2018</small>
+  <hr>
+
+
+  <h3>Some quotes from job requirements: </h3>
+
+<p>  <q>Enthusiastically engage in both product-related and technical discussions.</q></p>
+  <p><q>Continuously evaluate and incorporate new ideas and technologies.</q></p>
+  <p><q>Participate in both giving and receiving code reviews from other engineers, considering robustness, edge cases, usability, and general reliability.</q></p>
+  <p><q>Capable communicators passionate about product development and user experience.</q></p>
+  <p><q>Autodidacts who love continual learning and exploration.</q></p>
+  <p><q>Engineering leaders who care about coding standards and writing lean, maintainable software.</q></p>
+  <p><q>You deliver quality, testable, production-ready code using rapid, iterative development cycles.</q></p>
+  <p><q>Full-stack experience and understanding of how all the pieces fit together (frontend, backend, database, network layer, etc.) and how they impact the performance of your application.</q></p>
+  <p><q>Ability to interpret business and technical requirements and design specifications and communicate approaches and solutions effectively.</q></p>
+  <p><q>Comfortable consuming visual designs in Photoshop or Illustrator for translation into markup.</q></p>
+
+</body>
+</html>
